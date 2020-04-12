@@ -1,0 +1,279 @@
+// @import "../../node_modules/slick-carousel/slick/slick";
+// @import "../../node_modules/magnific-popup/dist/magnific-popup";
+
+@import "alternatives";
+@import "media";
+@import "libs";
+@import "fonts";
+@import "vars";
+
+/*
+   *Main custom css file copiled with scss
+   *Author:Yurii Babyn
+   *Email:gofrelancetalks@gmail.com
+ */
+
+body {
+  font-family: $fsource;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 135%;
+  a {
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: $ffira;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
+.navbar {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+.navbar-nav {
+  width: 100%;
+}
+.header {
+  position: relative;
+  &__bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  &__link {
+    color: #ffffff;
+    &:hover {
+      color: $teal;
+    }
+  }
+  &__title {
+    font-family: $ffira;
+    font-weight: 700;
+    font-size: 58px;
+  }
+  @media (max-width: 450px) {
+    &__title {
+      font-size: 45px;
+    }
+    &__subtitle {
+      font-size: 20px;
+    }
+  }
+}
+
+.nav__item {
+  margin-left: 50px;
+  &:first-child {
+    margin-left: 0;
+  }
+  a {
+    color: #ffffff;
+    &:hover {
+      color: $teal;
+    }
+  }
+}
+
+.nav__units {
+  color: #ffffff;
+  &-search {
+    margin-right: 50px;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      margin-bottom: 4px;
+      transition: all 0.3s ease 0s;
+    }
+  }
+  &-globe {
+    margin-right: 14px;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      margin-bottom: 4px;
+      transition: all 0.3s ease 0s;
+    }
+  }
+}
+
+.toolbar {
+  width: 100%;
+  background: #2378fc;
+  padding: 17.5px 0px 37.5px 0px;
+  &__list-item {
+    margin-top: 15px;
+    a {
+      &:hover {
+        transition: all 0.3s ease 0s;
+        color: $linkcol;
+      }
+    }
+  }
+}
+
+.events {
+  width: 100%;
+  background: $linkcol;
+  padding: 17.5px 0px 37.5px 0px;
+  &__title {
+    color: $gray-900;
+    margin-bottom: 10px;
+  }
+  &__item {
+    margin-top: 40px;
+    &:last-child a {
+      margin-top: 0px;
+    }
+  }
+  &__item-list {
+  }
+  &__item-list-item-data {
+    font-size: 14px;
+    color: $gray-900;
+    margin-top: 20px;
+  }
+  &__item-list-item-red {
+    font-family: $ffira;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 130%;
+    letter-spacing: -0.01em;
+    color: #f6404f;
+    margin: 10px 0px;
+  }
+  &__item-list-item-info {
+    color: $gray-900;
+  }
+}
+
+.title {
+  font-family: $ffira;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  margin-top: 20px;
+}
+
+.path {
+  text-decoration: underline;
+  color: $gray-900;
+  &:hover {
+    color: $white;
+  }
+}
+
+.news {
+  padding: 70px 0px;
+  &__title {
+    color: $gray-900;
+  }
+  &__img {
+    margin-top: 59px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  &__text {
+    padding-left: 15px;
+  }
+  &__text-date {
+    color: red;
+  }
+  &__text-text {
+    font-family: $ffira;
+    font-weight: 400;
+    font-size: 21px;
+    letter-spacing: -0.01em;
+    color: $gray-900;
+  }
+}
+
+.footer {
+  font-size: 14px;
+  padding: 70px 0px;
+  width: 100%;
+  background: #30bcc9;
+  &__media {
+    position: relative;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      width: auto;
+      height: 20px;
+      transition: all 0.3s ease 0s;
+    }
+  }
+  &__news-form {
+    display: flex;
+    margin-top: 30px;
+  }
+  &__button {
+    display: inline-block;
+    background: red;
+    border: transparent;
+    height: 30px;
+    &:hover {
+      background: $success;
+    }
+  }
+  &__input {
+    display: inline-block;
+    border: transparent;
+    border-radius: 0px;
+    padding-bottom: 2px;
+    height: 30px;
+  }
+  @media (max-width: 768px) {
+    &__list {
+      display: none;
+    }
+  }
+}
+
+.pull-up {
+  position: relative;
+  display: inline-block;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 5px;
+    right: -15px;
+    width: 3px;
+    height: 20px;
+    background: #ffffff;
+    transform: rotateZ(-45deg);
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    top: 5px;
+    right: -27px;
+    width: 3px;
+    height: 20px;
+    background: #ffffff;
+    transform: rotateZ(45deg);
+  }
+}
+
+.title-sm {
+  font-family: $ffira;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  margin-top: 20px;
+}
